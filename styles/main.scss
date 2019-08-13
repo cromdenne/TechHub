@@ -1,0 +1,33 @@
+---
+# Frontmatter to ensure Jekyll properly reads file
+---
+
+/*===========================================================================*/
+/* variables                                                                 */
+/*===========================================================================*/
+$black:     #2a2a2a;
+$burgundy:  #782f40;
+$white:     #ffffff;
+
+/*===========================================================================*/
+/* global styles                                                             */
+/*===========================================================================*/
+body {
+  background-color: #f0f0f0;
+  color: $black;
+  font-family: 'Red Hat Display', sans-serif;
+  margin-top: 150px;
+}
+
+/*===========================================================================*/
+/* header                                                                    */
+/*===========================================================================*/
+.header {
+  background-color: $burgundy;
+  color: $white;
+  min-height: 150px;
+  .navbar-brand {
+    color: $white;
+    font-family: 'Saira Stencil One', cursive;
+  }
+}
