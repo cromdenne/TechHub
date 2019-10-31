@@ -27,6 +27,10 @@ body {
   padding: 10px 30px;
 }
 
+.display {
+  font-family: 'Saira Stencil One', cursive;
+}
+
 /*===========================================================================*/
 /* header                                                                    */
 /*===========================================================================*/
@@ -41,7 +45,6 @@ body {
       margin-right: 15px;
     }
     .display {
-      font-family: 'Saira Stencil One', cursive;
       font-size: 1.75em;
     }
     .plaintext {
@@ -51,11 +54,40 @@ body {
   .navbar-nav {
     a, a:visited {
       color: $white;
-      transition: all ease-in-out 0.2s;
+      transition: all linear 0.2s;
     }
     a:hover, a:active {
       color: $gold;
-      transition: all ease-in-out 0.2s;
+      transition: all linear 0.2s;
+    }
+  }
+}
+
+/*===========================================================================*/
+/* footer                                                                    */
+/*===========================================================================*/
+.footer {
+  background-color: $black;
+  border-top: 10px solid $burgundy;
+  color: $white;
+  margin-top: 50px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  img {
+    max-width: 75px;
+    margin-bottom: 15px;
+  }
+  .links {
+    margin-top: 50px;
+    a, a:visited {
+      padding: 0 15px;
+      color: $gold;
+      transition: all linear 0.2s;
+    }
+    a:hover, a:active {
+      color: darken($gold, 20%);
+      text-decoration: none;
+      transition: all linear 0.2s;
     }
   }
 }
