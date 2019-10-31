@@ -7,6 +7,7 @@
 /*===========================================================================*/
 $black:     #2a2a2a;
 $burgundy:  #782f40;
+$gold:      #ffb81c;
 $white:     #ffffff;
 
 /*===========================================================================*/
@@ -24,10 +25,30 @@ body {
 /*===========================================================================*/
 .header {
   background-color: $burgundy;
+  border-bottom: 10px solid $gold;
   color: $white;
   min-height: 150px;
   .navbar-brand {
     color: $white;
-    font-family: 'Saira Stencil One', cursive;
+    img {
+      margin-right: 15px;
+    }
+    .display {
+      font-family: 'Saira Stencil One', cursive;
+      font-size: 1.75em;
+    }
+    .plaintext {
+      font-size: 0.75em;
+    }
+  }
+  .navbar-nav {
+    a, a:visited {
+      color: $white;
+      transition: all ease-in-out 0.2s;
+    }
+    a:hover, a:active {
+      color: $gold;
+      transition: all ease-in-out 0.2s;
+    }
   }
 }
