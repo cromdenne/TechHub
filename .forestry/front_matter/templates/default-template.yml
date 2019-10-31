@@ -1,0 +1,15 @@
+---
+label: Default Template
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: Page title
+pages:
+- resources.md
