@@ -20,6 +20,13 @@ body {
   margin-top: 150px;
 }
 
+.button-primary {
+  background-color: $burgundy;
+  border: none;
+  color: $white;
+  padding: 10px 30px;
+}
+
 /*===========================================================================*/
 /* header                                                                    */
 /*===========================================================================*/
@@ -50,5 +57,27 @@ body {
       color: $gold;
       transition: all ease-in-out 0.2s;
     }
+  }
+}
+
+/*===========================================================================*/
+/* jumbotron                                                                 */
+/*===========================================================================*/
+.jumbotron {
+  margin: 0 0 50px;
+  padding: 0px;
+  img {
+    height: calc(100vh - 150px);
+    width: 100vw;
+    object-fit: cover;
+  }
+  .splashbox {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    background-color: rgba(200,200,200,0.7);
+    width: 350px;
+    height: calc(100vh - 150px);
+    padding: 50px 30px;
   }
 }
