@@ -20,6 +20,14 @@ body {
   margin-top: 150px;
 }
 
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+a {
+  color: #ff4258;
+}
+
 .button-primary {
   background-color: $burgundy;
   border: none;
@@ -29,6 +37,12 @@ body {
 
 .display {
   font-family: 'Saira Stencil One', cursive;
+}
+
+.link-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*===========================================================================*/
@@ -70,7 +84,6 @@ body {
   background-color: $black;
   border-top: 10px solid $burgundy;
   color: $white;
-  margin-top: 50px;
   padding-top: 75px;
   padding-bottom: 75px;
   img {
@@ -93,10 +106,20 @@ body {
 }
 
 /*===========================================================================*/
+/* title                                                                     */
+/*===========================================================================*/
+.title {
+  background-color: $gold;
+  color: $white;
+  padding: 10px 50px;
+  text-transform: uppercase;
+}
+
+/*===========================================================================*/
 /* jumbotron                                                                 */
 /*===========================================================================*/
 .jumbotron {
-  margin: 0 0 50px;
+  margin: 0;
   padding: 0px;
   img {
     height: calc(100vh - 150px);
@@ -111,5 +134,16 @@ body {
     width: 350px;
     height: calc(100vh - 150px);
     padding: 50px 30px;
+    h4 {
+      font-weight: 400;
+    }
   }
+}
+
+/*===========================================================================*/
+/* content                                                                   */
+/*===========================================================================*/
+.content {
+  background-color: $white;
+  padding: 50px;
 }
