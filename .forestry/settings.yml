@@ -4,14 +4,12 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: directory
-  path: _supporters
-  label: Supporters
-  create: documents
-  match: "**/*"
-  new_doc_ext: md
-  templates:
-  - supporter
+- type: jekyll-pages
+  label: Pages
+  create: all
+- type: jekyll-posts
+  label: Posts
+  create: all
 - type: directory
   path: _sessions
   label: Sessions
@@ -20,12 +18,14 @@ sections:
   new_doc_ext: md
   templates:
   - session
-- type: jekyll-pages
-  label: Pages
-  create: all
-- type: jekyll-posts
-  label: Posts
-  create: all
+- type: directory
+  path: _supporters
+  label: Supporters
+  create: documents
+  match: "**/*"
+  new_doc_ext: md
+  templates:
+  - supporter
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
