@@ -2,12 +2,12 @@
 label: Session
 hide_body: false
 fields:
-- name: session_title
+- name: title
   type: text
   config:
     required: true
   label: Session Title
-- name: session_date
+- name: date
   type: datetime
   description: ''
   config:
@@ -16,7 +16,7 @@ fields:
     time_format: 
     display_utc: false
   label: Session Date
-- name: session_location
+- name: location
   type: text
   config:
     required: true
