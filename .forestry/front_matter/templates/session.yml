@@ -1,6 +1,6 @@
 ---
 label: Session
-hide_body: true
+hide_body: false
 fields:
 - name: session_title
   type: text
