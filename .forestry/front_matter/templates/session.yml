@@ -21,7 +21,7 @@ fields:
   config:
     required: true
   label: Session Location
-- name: building
+- name: staff
   type: select
   default: []
   config:
@@ -31,11 +31,11 @@ fields:
     - Middle School
     - Intermediate School
     - Primary School
-    - District
+    - All
     source:
       type: simple
       section: 
       file: 
       path: 
-  label: Building
-  description: Which building does the session apply to?
+  label: Staff
+  description: Which staff does the session apply to?
