@@ -1,4 +1,51 @@
 ---
 label: Session
 hide_body: true
-fields: []
+fields:
+- name: session_title
+  type: text
+  config:
+    required: true
+  label: Session Title
+- name: session_date
+  type: datetime
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Session Date
+- name: session_time
+  type: datetime
+  label: Session Time
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: ''
+- name: session_location
+  type: text
+  config:
+    required: true
+  label: Session Location
+- name: building
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - High School
+    - Middle School
+    - Intermediate School
+    - Primary School
+    - District
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Building
+  description: Which building does the session apply to?
