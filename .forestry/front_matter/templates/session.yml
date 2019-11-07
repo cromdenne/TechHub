@@ -39,3 +39,5 @@ fields:
       path: 
   label: Staff
   description: Which staff does the session apply to?
+pages:
+- _sessions/lunchlearn20191120.md
