@@ -1,4 +1,48 @@
 ---
 label: Supporter
 hide_body: false
-fields: []
+fields:
+- name: supporter_name
+  type: text
+  config:
+    required: true
+  label: Support Person Name
+  description: last, first
+- name: building
+  type: select
+  default: []
+  config:
+    required: true
+    options:
+    - High School
+    - Middle School
+    - Intermediate School
+    - Primary School
+    - District
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Building
+  description: Where does this person primarily work?
+- name: phone_extension
+  type: number
+  label: Phone Extension
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+  description: three-digit L-C phone extension
+- name: email
+  type: text
+  config:
+    required: true
+  label: Email
+- name: image
+  type: file
+  config:
+    maxSize: 250
+  label: Image
