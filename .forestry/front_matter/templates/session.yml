@@ -16,16 +16,6 @@ fields:
     time_format: 
     display_utc: false
   label: Session Date
-- name: session_time
-  type: datetime
-  label: Session Time
-  description: ''
-  config:
-    required: true
-    date_format: 
-    time_format: 
-    display_utc: false
-  default: ''
 - name: session_location
   type: text
   config:
