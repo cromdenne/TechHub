@@ -11,5 +11,3 @@ fields:
     required: false
   label: Title
   description: Page title
-pages:
-- resources.md
