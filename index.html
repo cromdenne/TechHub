@@ -65,7 +65,6 @@ splash: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1
                   <strong>Date:</strong> {{ session.date | date: "%B %-d, %Y" }}<br>
                   <strong>Time:</strong> {{ session.date | date: "%I:%M%p" }}<br>
                   <strong>Location:</strong> {{ session.location }}
-                  {{ counter }}
                 </p>
               </div><!-- /.session -->
               {% assign counter = counter | plus: 1 %}
