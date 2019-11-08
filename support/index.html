@@ -14,20 +14,23 @@ title: "Support"
                 <h4 class="d-lg-inline-block">{{ supporter.name }}</h4>
                 <div class="detail d-lg-inline-block">
                   <h6>
-                    <i class="fas fa-building"></i> 
+                    <i class="fas fa-building"></i>&nbsp; 
                      {{ supporter.building }}
                   </h6>
                 </div><!-- /.col -->
                 <div class="detail d-lg-inline-block">
                   <h6>
-                    <i class="fas fa-phone"></i>
+                    <i class="fas fa-phone"></i>&nbsp;
                      x{{ supporter.extension }}
                   </h6>
                 </div><!-- /.col -->
                 <div class="detail d-lg-inline-block">
                   <h6>
-                    <i class="fas fa-envelope"></i>
-                     {{ supporter.email }}
+                    <i class="fas fa-envelope"></i>&nbsp;
+                    <a href="mailto:{{ supporter.email }}" target="_blank"
+                       rel="noreferrer">
+                      {{ supporter.email }}
+                    </a>
                   </h6>
                 </div><!-- /.col -->
               </div><!-- /.col -->

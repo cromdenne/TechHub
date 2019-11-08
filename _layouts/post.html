@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include meta.html %}
+  </head>
+  <body>
+    {% include header.html %}
+
+    <div class="container content">
+      <div class="row">
+        <div class="col">
+          <h3>{{ page.title }}</h3>
+          <h6 class="lighter d-inline-block">
+            {{ page.date | date: '%B %-d, %Y' }}
+          </h6>
+          &nbsp — &nbsp
+          <h6 class="d-inline-block">
+            <a href="{{ page.email }}">{{ page.author }}</a>
+          </h6>
+          <br><br>
+          {{ content }}
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    {% include footer.html %}
+  </body>
+</html>
