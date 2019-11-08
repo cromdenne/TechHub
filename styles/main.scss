@@ -159,6 +159,12 @@ a:hover, a:active {
 /*===========================================================================*/
 /* pd                                                                        */
 /*===========================================================================*/
+.session {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
 .pd-district-leftcol {
   border-right: 2px solid lighten($black, 60%);
 }
@@ -177,10 +183,14 @@ a:hover, a:active {
 /* support                                                                   */
 /*===========================================================================*/
 .supporter {
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
   .person {
     margin-bottom: 10px;
-  }
-  .lighter {
-    color: lighten($black, 50%);
+    .detail {
+      color: lighten($black, 50%);
+      padding-left: 40px;
+    }
   }
 }

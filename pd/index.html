@@ -6,15 +6,55 @@ title: "Professional Development"
 <div class="content container">
   <div class="row">
     <div class="col">
+      <h4>District</h4>
+      {% assign district_sessions = site.sessions | where: "staff", "All" %}
+      {% for session in district_sessions %}
+        {% assign now_date = 'now' | date: '%s' %}
+        {% assign session_date = session.date | date: '%s' %}
+        {% if session_date > now_date %}
+          <div class="session row">
+            <div class="pd-district-leftcol col-3">
+              <h6>{{ session.title }}</h6>
+              <p>
+                <strong>Date:</strong> {{ session.date | date: "%B %-d, %Y" }}<br>
+                <strong>Time:</strong> {{ session.date | date: "%I:%M%p" }}<br>
+                <strong>Location:</strong> {{ session.location }}
+              </p>
+            </div><!-- /.col-3 -->
+            <div class="col-9">
+              <p>
+                {{ session.content }}
+              </p>
+            </div><!-- /.col-9 -->
+          </div><!-- /.row -->
+        {% endif %}
+      {% else %}
+        <div class="row">
+          <div class="col">
+            <p>No upcoming sessions.</p>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      {% endfor %}
+    </div><!-- /.col -->
+  </div><!-- /.row -->
+  <br><br>
+  <div class="row">
+    <div class="col">
       <h4>Primary School</h4>
       {% assign ps_sessions = site.sessions | where: "staff", "Primary School" %}
       {% for session in ps_sessions %}
-        <h6>{{ session.title }}</h6>
-        <p>
-          <strong>Date:</strong> {{ session.date | date: "%B %-d, %Y" }}<br>
-          <strong>Time:</strong> {{ session.date | date: "%I:%M%p" }}<br>
-          <strong>Location:</strong> {{ session.location }}
-        </p>
+        {% assign now_date = 'now' | date: '%s' %}
+        {% assign session_date = session.date | date: '%s' %}
+        {% if session_date > now_date %}
+          <div class="session">
+            <h6>{{ session.title }}</h6>
+            <p>
+              <strong>Date:</strong> {{ session.date | date: "%B %-d, %Y" }}<br>
+              <strong>Time:</strong> {{ session.date | date: "%I:%M%p" }}<br>
+              <strong>Location:</strong> {{ session.location }}
+            </p>
+          </div><!-- /.session -->
+        {% endif %}
       {% else %}
         <p>No upcoming sessions.</p>
       {% endfor %}
@@ -23,12 +63,18 @@ title: "Professional Development"
       <h4>Intermediate School</h4>
       {% assign is_sessions = site.sessions | where: "staff", "Intermediate School" %}
       {% for session in is_sessions %}
-        <h6>{{ session.title }}</h6>
-        <p>
-          <strong>Date:</strong> {{ session.date | date: "%B %-d, %Y" }}<br>
-          <strong>Time:</strong> {{ session.date | date: "%I:%M%p" }}<br>
-          <strong>Location:</strong> {{ session.location }}
-        </p>
+        {% assign now_date = 'now' | date: '%s' %}
+        {% assign session_date = session.date | date: '%s' %}
+        {% if session_date > now_date %}
+          <div class="session">
+            <h6>{{ session.title }}</h6>
+            <p>
+              <strong>Date:</strong> {{ session.date | date: "%B %-d, %Y" }}<br>
+              <strong>Time:</strong> {{ session.date | date: "%I:%M%p" }}<br>
+              <strong>Location:</strong> {{ session.location }}
+            </p>
+          </div><!-- /.session -->
+        {% endif %}
       {% else %}
         <p>No upcoming sessions.</p>
       {% endfor %}
@@ -37,12 +83,18 @@ title: "Professional Development"
       <h4>Middle School</h4>
       {% assign ms_sessions = site.sessions | where: "staff", "Middle School" %}
       {% for session in ms_sessions %}
-        <h6>{{ session.title }}</h6>
-        <p>
-          <strong>Date:</strong> {{ session.date | date: "%B %-d, %Y" }}<br>
-          <strong>Time:</strong> {{ session.date | date: "%I:%M%p" }}<br>
-          <strong>Location:</strong> {{ session.location }}
-        </p>
+        {% assign now_date = 'now' | date: '%s' %}
+        {% assign session_date = session.date | date: '%s' %}
+        {% if session_date > now_date %}
+          <div class="session">
+            <h6>{{ session.title }}</h6>
+            <p>
+              <strong>Date:</strong> {{ session.date | date: "%B %-d, %Y" }}<br>
+              <strong>Time:</strong> {{ session.date | date: "%I:%M%p" }}<br>
+              <strong>Location:</strong> {{ session.location }}
+            </p>
+          </div><!-- /.session -->
+        {% endif %}
       {% else %}
         <p>No upcoming sessions.</p>
       {% endfor %}
@@ -51,44 +103,20 @@ title: "Professional Development"
       <h4>High School</h4>
       {% assign hs_sessions = site.sessions | where: "staff", "High School" %}
       {% for session in hs_sessions %}
-        <h6>{{ session.title }}</h6>
-        <p>
-          <strong>Date:</strong> {{ session.date | date: "%B %-d, %Y" }}<br>
-          <strong>Time:</strong> {{ session.date | date: "%I:%M%p" }}<br>
-          <strong>Location:</strong> {{ session.location }}
-        </p>
-      {% else %}
-        <p>No upcoming sessions.</p>
-      {% endfor %}
-    </div><!-- /.col -->
-  </div><!-- /.row -->
-  <br><br>
-  <div class="row">
-    <div class="col">
-      <h4>District</h4>
-      {% assign district_sessions = site.sessions | where: "staff", "All" %}
-      {% for session in district_sessions %}
-        <div class="row">
-          <div class="pd-district-leftcol col-3">
+        {% assign now_date = 'now' | date: '%s' %}
+        {% assign session_date = session.date | date: '%s' %}
+        {% if session_date > now_date %}
+          <div class="session">
             <h6>{{ session.title }}</h6>
             <p>
               <strong>Date:</strong> {{ session.date | date: "%B %-d, %Y" }}<br>
               <strong>Time:</strong> {{ session.date | date: "%I:%M%p" }}<br>
               <strong>Location:</strong> {{ session.location }}
             </p>
-          </div><!-- /.col-3 -->
-          <div class="col-9">
-            <p>
-              {{ session.content }}
-            </p>
-          </div><!-- /.col-9 -->
-        </div><!-- /.row -->
+          </div><!-- /.session -->
+        {% endif %}
       {% else %}
-        <div class="row">
-          <div class="col">
-            <p>No upcoming sessions.</p>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
+        <p>No upcoming sessions.</p>
       {% endfor %}
     </div><!-- /.col -->
   </div><!-- /.row -->
