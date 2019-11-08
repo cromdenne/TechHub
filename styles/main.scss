@@ -166,6 +166,26 @@ a {
   font-size: 0.9em;
 }
 
+.post-snip {
+  &:not(:first-child) {
+    padding-top: 35px;
+  }
+  &:not(:last-child) {
+    border-bottom: 1px solid lighten($black, 70%);
+    padding-bottom: 25px;
+  }
+  .post-title a {
+    color: $gold;
+    transition: all linear 0.2s;
+    &:hover, &:active {
+      color: darken($gold, 10%);
+      transition: all linear 0.2s;
+    }
+  }
+  .post-date {
+    color: lighten($black, 60%);
+  }
+}
 /*===========================================================================*/
 /* pd                                                                        */
 /*===========================================================================*/
