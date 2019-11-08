@@ -28,12 +28,11 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $red;
   transition: all linear 0.2s;
-}
-
-a:hover, a:active {
-  color: darken($red, 30%);
-  transition: all linear 0.2s;
-  text-decoration: none;
+  &:hover, &:active {
+    color: darken($red, 30%);
+    transition: all linear 0.2s;
+    text-decoration: none;
+  }
 }
 
 .button-primary {
@@ -41,6 +40,12 @@ a:hover, a:active {
   border: none;
   color: $white;
   padding: 10px 30px;
+  transition: all linear 0.2s;
+  &:hover, &:active {
+    background-color: darken($burgundy, 10%);
+    color: $white;
+    transition: all linear 0.2s;
+  }
 }
 
 .display {
@@ -156,10 +161,22 @@ a:hover, a:active {
   padding: 50px;
 }
 
+.sideright {
+  border-left: 2px solid lighten($black, 60%);
+  font-size: 0.9em;
+}
+
 /*===========================================================================*/
 /* pd                                                                        */
 /*===========================================================================*/
 .session {
+  h6 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  p {
+    font-size: 0.9em;
+  }
   &:not(:last-child) {
     margin-bottom: 20px;
   }
@@ -167,16 +184,6 @@ a:hover, a:active {
 
 .pd-district-leftcol {
   border-right: 2px solid lighten($black, 60%);
-}
-
-/*===========================================================================*/
-/* dlt                                                                       */
-/*===========================================================================*/
-.sideright {
-  border-left: 2px solid lighten($black, 60%);
-  ul {
-    font-size: 0.9em;
-  }
 }
 
 /*===========================================================================*/

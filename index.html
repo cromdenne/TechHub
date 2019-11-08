@@ -15,12 +15,14 @@ splash: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1
       we use technology to bring that vision to life.
     </p>
     <br><br>
-    <button class="button-primary">Learn more --></button>
+    <a href="/dlt" class="button-primary">
+      Learn more <i class="fas fa-arrow-right"></i>
+    </a>
   </div><!-- /.splashbox -->
 </div><!-- /.jumbotron -->
 <div class="content container">
   <div class="row">
-    <div class="col">
+    <div class="col-9">
       <h1>Hello, world!</h1>
       <p>
         Nullam est lacus, interdum quis purus eleifend, mattis posuere quam.
@@ -54,6 +56,45 @@ splash: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1
         fringilla pretium ex, ut euismod orci fringilla ac. In vitae pretium
         arcu.
       </p>
-    </div><!-- /.col -->
+    </div><!-- /.col-8 -->
+    <div class="sideright col-3">
+      <div class="row">
+        <div class="col">
+          <h4>Contact a Coach</h4>
+          <ul class="link-list">
+            {% for coach in site.supporters %}
+              <li>
+                <a href="mailto:{{ coach.email }}" target="_blank" rel="noreferrer">
+                  {{ coach.name }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+      <br><br>
+      <div class="row">
+        <div class="col">
+          <h4>Upcoming Sessions</h4>
+          {% assign counter = 0 %}
+          {% for session in site.sessions %}
+            {% assign now_date = 'now' | date: '%s' %}
+            {% assign session_date = session.date | date: '%s' %}
+            {% if session_date > now_date and counter < 3 %}
+              <div class="session">
+                <h6>{{ session.title }}</h6>
+                <p>
+                  <strong>Date:</strong> {{ session.date | date: "%B %-d, %Y" }}<br>
+                  <strong>Time:</strong> {{ session.date | date: "%I:%M%p" }}<br>
+                  <strong>Location:</strong> {{ session.location }}
+                  {{ counter }}
+                </p>
+              </div><!-- /.session -->
+              {% assign counter = counter | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.col-3 -->
   </div><!-- /.row -->
 </div><!-- /.container -->
