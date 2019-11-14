@@ -40,4 +40,5 @@ fields:
   label: Staff
   description: Which staff does the session apply to?
 pages:
+- _sessions/lunch-learn.md
 - _sessions/lunchlearn20191120.md
